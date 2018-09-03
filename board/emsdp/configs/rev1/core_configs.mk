@@ -8,7 +8,7 @@ override CORE := $(strip $(CORE))
 ## Set Valid Core Configuration For Board
 VALID_CORE = $(call check_item_exist, $(CORE), $(SUPPORTED_CORES))
 
-BOARD_CORE_DIR = $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs/$(VALID_CORE)
+BOARD_CORE_DIR = $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)/$(VALID_CORE)
 
 ## Core Configuation Folder ##
 CORE_TCF_DIR = $(BOARD_CORE_DIR)/tcf

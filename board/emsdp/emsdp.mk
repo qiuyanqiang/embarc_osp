@@ -52,11 +52,11 @@ endif
 endif
 
 ## Compiler Options
-COMMON_COMPILE_PREREQUISITES += $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs/core_configs.mk
-include $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs/core_configs.mk
+COMMON_COMPILE_PREREQUISITES += $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)/core_configs.mk
+include $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)/core_configs.mk
 
-COMMON_COMPILE_PREREQUISITES += $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs/core_compiler.mk
-include $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs/core_compiler.mk
+COMMON_COMPILE_PREREQUISITES += $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)/core_compiler.mk
+include $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)/core_compiler.mk
 
 ## Board Related Settings
 ifeq ($(VALID_BD_VER), rev1)
@@ -106,7 +106,7 @@ BOARD_EMSDP_CSRCDIR += $(BOARD_EMSDP_DIR)/drivers/pmwifi
 endif
 
 BOARD_EMSDP_ASMSRCDIR	+= $(BOARD_EMSDP_DEV_ASMSRCDIR) $(BOARD_CORE_DIR)
-BOARD_EMSDP_INCDIR	+= $(BOARD_EMSDP_DEV_INCDIR) $(BOARD_CORE_DIR) $(BOARD_EMSDP_DIR)/$(VALID_BD_VER)/configs
+BOARD_EMSDP_INCDIR	+= $(BOARD_EMSDP_DEV_INCDIR) $(BOARD_CORE_DIR) $(BOARD_EMSDP_DIR)/configs/$(VALID_BD_VER)
 
 
 # find all the source files in the target directories
